@@ -35,7 +35,8 @@ namespace calcola_sottoreti
             }
             else
             {
-                MessageBox.Show("Esagera mia");
+                //
+                MessageBox.Show("numero eccessivo");
             }
             Classe.Text = classe;
             if (Classe.Text == "A")
