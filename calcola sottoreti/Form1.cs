@@ -53,13 +53,14 @@ namespace calcola_sottoreti
                 Indirizzoprivato.Text = "192.168.0.0";
             }
 
+            subnet();
         }
 
 
 
         public int bitrete;
 
-        public string subnet()
+        public void subnet()
         {
             int potenza = 0;
             int ultimobit = 8;
@@ -69,6 +70,7 @@ namespace calcola_sottoreti
             {
                 potenza++;
             }
+
             Classe.Text = classe;
             if (Classe.Text == "A")
             {
@@ -78,7 +80,17 @@ namespace calcola_sottoreti
                 bitrete = potenza + bitrete;
                 bithost = potenza + bithost;
 
-              
+                ultimobit = ultimobit - potenza;
+
+                for (int i = ultimobit; i < bitrete; i++)
+                {
+
+                    lastsubnet = lastsubnet + Math.Pow(2, i);
+
+
+
+                }
+
 
             }
             if (Classe.Text == "B")
@@ -89,7 +101,16 @@ namespace calcola_sottoreti
                 bitrete = potenza + bitrete;
                 bithost = potenza + bithost;
 
-              
+                ultimobit = ultimobit - potenza;
+
+                for (int i = ultimobit; i < bitrete; i++)
+                {
+
+                    lastsubnet = lastsubnet + Math.Pow(2, i);
+
+
+
+                }
 
             }
             if (Classe.Text == "C")
@@ -100,20 +121,19 @@ namespace calcola_sottoreti
                 bitrete = potenza + bitrete;
                 bithost = potenza + bithost;
 
+                ultimobit = ultimobit - potenza;
 
+                for (int i = ultimobit; i < bitrete; i++)
+                {
+
+                    lastsubnet = lastsubnet + Math.Pow(2, i);
+
+                }
+
+
+                textBox1.Text = "255.255.255."+lastsubnet;
             }
 
-
-            ultimobit = ultimobit - potenza;
-
-            for (int i = ultimobit; i < bitrete; i++)
-            {
-
-                lastsubnet = lastsubnet + Math.Pow(2, i);
-
-
-
-            }
 
         }
 
