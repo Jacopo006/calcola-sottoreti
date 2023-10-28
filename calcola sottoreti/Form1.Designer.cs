@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Indirizzoprivato = new System.Windows.Forms.TextBox();
             this.Classe = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sottoreti
@@ -83,23 +84,32 @@
             // 
             // Indirizzoprivato
             // 
-            this.Indirizzoprivato.Location = new System.Drawing.Point(345, 40);
+            this.Indirizzoprivato.Location = new System.Drawing.Point(337, 29);
             this.Indirizzoprivato.Name = "Indirizzoprivato";
             this.Indirizzoprivato.Size = new System.Drawing.Size(100, 20);
             this.Indirizzoprivato.TabIndex = 5;
             // 
             // Classe
             // 
-            this.Classe.Location = new System.Drawing.Point(345, 68);
+            this.Classe.Location = new System.Drawing.Point(443, 29);
             this.Classe.Name = "Classe";
             this.Classe.Size = new System.Drawing.Size(100, 20);
             this.Classe.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(549, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Classe);
             this.Controls.Add(this.Indirizzoprivato);
             this.Controls.Add(this.button1);
@@ -123,6 +133,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Indirizzoprivato;
         private System.Windows.Forms.TextBox Classe;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
